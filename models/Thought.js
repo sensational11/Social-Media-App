@@ -1,5 +1,5 @@
 const { Schema, Types } = require("mongoose");
-const reactionSchema = requir('/Reaction')
+const reactionSchema = require('/Reaction')
 const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
@@ -17,6 +17,16 @@ const thoughtSchema = new Schema({
     type: String,
     required: true,
   },
+reaction: [reactionSchema]
 
-
+},{
+    
+     toJSON: {
+          virtuals: true,
+        },
+        id: false,
+      
 });
+//make a virtual 
+const Thought = model("Thought", thoughtSchema);
+module.export = Thought;
