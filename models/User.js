@@ -1,12 +1,14 @@
 const { Schema, model } = require("mongose");
-const { stringify } = require("querystring");
+// const { stringify } = require("querystring");
+
+//Schema to create User model
 const userSchema = new Schema(
   {
     username: {
       type: String,
-      Unique: true,
-      Required: true,
-      Trimmed: true,
+      unique: true,
+      required: true,
+      trimmed: true,
     },
 
     email: {
