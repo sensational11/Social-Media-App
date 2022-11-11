@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongose");
-// const { stringify } = require("querystring");
+
 
 //Schema to create User model
 const userSchema = new Schema(

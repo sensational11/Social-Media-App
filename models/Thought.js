@@ -27,6 +27,6 @@ reaction: [reactionSchema]
         id: false,
       
 });
-//make a virtual 
+
 const Thought = model("Thought", thoughtSchema);
 module.export = Thought;
