@@ -2,7 +2,7 @@ const {ObjectId} = require('mongoose').Types;
 const {User, Thought} = require('../models');
 
 
-module.exports = {
+const userController = {
     //Get all users
     getUsers(req, res) {
         User.find()
@@ -37,3 +37,5 @@ module.exports = {
         });
     },
 }
+
+module.exports = userController;
