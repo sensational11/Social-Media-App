@@ -3,9 +3,9 @@ const { User, Thought } = require("../models");
 
 const userController = {
   //Get all users
-  getUsers(req, res) {
+  getUsers (req, res)  {
     User.find()
-      .then(async (users) => {
+      .then(async(users) => {
         const userObj = {
           users,
           headCount: await headCount(),
