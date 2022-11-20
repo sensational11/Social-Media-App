@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// const videoRoutes = require('./videoRoutes');
+
 const apiRoutes = require('./api');
 
 // router.use('/thought', thoughtRoutes);

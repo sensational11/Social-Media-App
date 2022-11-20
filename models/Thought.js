@@ -1,19 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
 
-const reactionSchema = new Schema(
-  {
-    reactionBody: {
-      type: String,
-      required: true,
-      maxLength: 300
-    }, 
-    username: {
-      type: String,
-      require: true
-    },
-  },
-)
-
 const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
