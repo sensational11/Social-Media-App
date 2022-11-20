@@ -1,6 +1,6 @@
-const { Thought, User } = require('../models');
+const { Thought, User } = require("../models");
 
-const thoughtController = {
+module.exports = {
   //Get all thoughts
   getThoughts(req, res) {
     Thought.find(req.body)
@@ -13,8 +13,8 @@ const thoughtController = {
       .select("-__v")
       .then((thought) =>
         !thought
-        ? res.status(404).json({message: 'No thought with that ID' })
-        : res.json(thought)
+          ? res.status(404).json({ message: "No thought with that ID" })
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
@@ -53,5 +53,3 @@ const thoughtController = {
       .catch((err) => req.status(500).json(err));
   },
 };
-
-module.exports = thoughtController;
