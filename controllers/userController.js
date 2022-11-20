@@ -5,17 +5,8 @@ const userController = {
   //Get all users
   getUsers (req, res)  {
     User.find()
-      .then(async(users) => {
-        const userObj = {
-          users,
-          headCount: await headCount(),
-        };
-        return res.json(userObj);
-      })
-      .catch((err) => {
-        console.log(err);
-        return res.status(500).json(err);
-      });
+.then((users) => res.json(users))
+.catch((err) => res.status(500).json(err))
   },
   // Get a single user
   getSingleUser(req, res) {

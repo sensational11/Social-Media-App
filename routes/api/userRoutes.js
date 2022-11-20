@@ -10,10 +10,10 @@ const{
 
 router
 .route("/")
-.get(getUsers);
+.get(getUsers).post(createUser);
 
 router
 .route("/:id")
-.get(getsingleUser);
+.get(getSingleUser);
 
 module.exports = router;
