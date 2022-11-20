@@ -13,7 +13,7 @@ router
 .get(getUsers).post(createUser);
 
 router
-.route("/:id")
+.route("/:userid")
 .get(getSingleUser);
 
 module.exports = router;
