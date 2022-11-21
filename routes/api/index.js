@@ -1,3 +1,4 @@
+//required dependencies
 const router = require('express').Router();
 
 const thoughtRoutes = require('./thoughtRoutes');

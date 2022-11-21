@@ -1,5 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 
+//Shema to create Thought Model
 const thoughtSchema = new Schema({
   thoughtText: {
     type: String,

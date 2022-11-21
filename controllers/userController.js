@@ -1,11 +1,13 @@
 const { User } = require('../models');
 
 module.exports = {
+  //Get all users
   getUsers(req, res) {
     User.find()
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },
+  //Get single user
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
     .select('-__v')
@@ -16,6 +18,7 @@ module.exports = {
     )
     .catch((err) => res.status(500).json(err));
   },
+  //Create user
   createUser(req, res) {
     User.create(req.body)
     .then((dbUserData) => res.json(dbUserData))
